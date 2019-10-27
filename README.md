@@ -22,11 +22,27 @@ In this challenge, you are to build a Smurfs village utilizing context or Redux 
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What problem does the context API help solve?
-- [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
-- [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
-- [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+- [X] What problem does the context API help solve?
+
+  Context API solves the problem of sharing state via props (and/or props drilling) to various scattered components. By incorporating the context API via useContext you can more easily share state among components.
+
+- [X] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+  - Actions - Actions are the only way to update reducers and change state. They're made up of an action type, and potentially a payload.
+  - Reducers - reducers take in the previous state, and an action as an argument. They then copy the state and apply the action against the copied state to create a new state. The only way to change the state in Redux is through reducers.
+  - Store - The store is a giant JS object that holds all state data. The store is known as the single source of truth because all state is maintained within it, as opposed to when you're not using Redux and the "source of truth" is scattered throughout the application.
+
+- [X] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+  Application state is when state is managed at an application level using something like Redux or Flux. Component state is when state is managed within various components. Application state is good to use when you have a large and complex applications. Especially when they're child and grandchild components that will need access to state. If your project is smaller or less complex component state would be more appropriate since you would be able to keep your code more DRY.
+
+- [X] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+  Redux-thunk allows us to perform asynchronous functions. It changes our action-creators into promises that use .then .catch
+
+- [X] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+  Redux is my favorite because it allows the compartmentalizing of state into a separate store. IT also allows for a host of middleware with use functionality to be applied to changes in state.
 
 ## Project Set Up
 
