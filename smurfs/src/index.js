@@ -12,11 +12,11 @@ import logger from "redux-logger"
 import thunk from "redux-thunk"
 
 //Reducer Imports
-import { reducer as smurfReducer } from "./reducers/reducer"
+import { getReducer} from "./reducers/reducer"
 
 
 const rootReducer = combineReducers({
-    smurf: smurfReducer
+    smurf: getReducer
 })
 
 
