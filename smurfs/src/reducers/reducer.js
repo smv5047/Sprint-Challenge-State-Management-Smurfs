@@ -1,10 +1,7 @@
 import {
     GET_SMURF_START,
     GET_SMURF_SUCCESS,
-    GET_SMURF_FAILURE,
-    // POST_SMURF_START,
-    // POST_SMURF_SUCCESS,
-    // POST_SMURF_FAILURE
+    GET_SMURF_FAILURE
 } from "../actions/actions"
 
 
@@ -37,24 +34,3 @@ export function getReducer (state =initialState, action) {
             return state;    
     }
 }
-
-// export function postReducer (state =initialState, action) {
-//     switch(action.type){
-//         case POST_SMURF_START:
-//             return{
-//                 ...state
-//             }
-//         case POST_SMURF_SUCCESS:
-//             return{
-//                 ...state,
-//                 smurf: [...state.smurf, action.payload]
-//             }
-//         case POST_SMURF_FAILURE:
-//             return{
-//                 ...state,
-//                 error: action.payload
-//             }
-//         default:
-//             return state;    
-//     }
-// }
