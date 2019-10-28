@@ -7,7 +7,7 @@ import {
 
 const initialState = {
     smurf: null,
-    isLoading: false,
+    isLoading: true,
     error: null
 }
 

@@ -11,9 +11,12 @@ import { createStore, applyMiddleware, combineReducers } from "redux"
 import logger from "redux-logger"
 import thunk from "redux-thunk"
 
+//Reducer Imports
+import { reducer as smurfReducer } from "./reducers/reducer"
+
 
 const rootReducer = combineReducers({
-
+    smurf: smurfReducer
 })
 
 
